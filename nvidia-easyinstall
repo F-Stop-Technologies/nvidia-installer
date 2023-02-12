@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Fix the error containing “‘/lib/live/boot’: No such file or directory”
+sudo mkdir /lib/live && sudo mkdir /lib/live/boot
+
 # Check if NVIDIA card is present
 if lspci | grep -i NVIDIA; then
   echo "NVIDIA card detected. Installing NVIDIA drivers..."
